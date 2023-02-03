@@ -1,0 +1,49 @@
+Create a DB with the following structure:
+
+name:
+
+cli_social_media
+tables:
+
+hackers
+columns:
+id (PK)
+alias (varchar)
+password (varchar)
+exploits
+columns:
+id (PK)
+content (text)
+user_id (FK)
+Pre-populate the data with some hackers (these are the users of the system).
+
+Setup a GitHub repository and local git repository to track work being done
+Create a python script that achieves the following:
+Allows a user to log in (find a matching username and password combination)
+If the login fails, the user should not be shown the options!
+Once logged in, presents the user with 4 options:
+Enter a new exploit (these are like posts)
+See all of their exploits
+See all other exploits by everyone except for the logged in user
+Exit the application
+The user should be able to re-pick each time (the options should be in a loop)
+Make sure each SQL interaction is supported with the appropriate exception catching.
+ 
+
+When submitting, please dump the DB to a file and put that in your git repo and make sure you push that as well!
+
+Remember DO NOT PUSH THE DBCREDS FILE.
+
+ 
+
+BONUS:
+
+Give users the ability to sign up. 
+They should be able to enter a username and password and have it stored.
+
+Give users the ability to modify an exploit that belong to them. 
+This can be a new option 
+(they will need to be able to pick the exploit they will want to modify)
+
+For option 3, show the username of the hacker that owns the exploit as well 
+as the exploit when printing.
